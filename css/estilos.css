@@ -230,3 +230,86 @@ a:hover {
     display: block;
     width: 100%;
 }
+
+@media (max-width: 960px) {
+    .d-flex {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    header .w-20,
+    header .w-60,
+    nav.w-60,
+    .w-30,
+    .w-40,
+    .w-45,
+    .w-50,
+    .w-60,
+    .w-70,
+    .w-80 {
+        width: 100%;
+    }
+
+    header .w-20 {
+        justify-content: center;
+    }
+
+    header .w-20 .w-30 {
+        width: 55px;
+    }
+
+    header .w-20 .w-70 {
+        width: auto;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    footer .text-left,
+    footer .text-right {
+        text-align: center;
+    }
+
+    .padding-hero {
+        padding: 55px 5%;
+    }
+
+    .padding-grande {
+        padding: 40px 5%;
+    }
+
+    .alto-destacado {
+        padding: 100px 15px;
+    }
+}
+
+@media (max-width: 640px) {
+    .texto-gigante {
+        font-size: 28px;
+    }
+
+    .texto-grande {
+        font-size: 22px;
+    }
+
+    .texto-mediano {
+        font-size: 16px;
+    }
+
+    .alto-tarjeta {
+        padding: 75px 10px;
+    }
+
+    .alto-arma {
+        width: 100%;
+        padding: 95px 10px;
+    }
+
+    .botones-flotantes {
+        bottom: 14px;
+        right: 14px;
+    }
+}
