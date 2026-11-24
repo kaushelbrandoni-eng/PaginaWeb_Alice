@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestiario y Enemigos - Alice: Madness Returns</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/trajes.css">
+    <link rel="stylesheet" href="./css/galerias.css">
+</head>
+<body class="bg-negro texto-blanco">
+
+    <header class="bg-negro w-100 padding-chico" id="inicio">
+        <section class="d-flex align-center centradito w-100">
+
+            <article class="w-20 d-flex align-center">
+                <article class="w-30 text-center">
+                    <a href="index.html" class="link-imagen">
+                        <img src="./img/Logo-alice.png" alt="Símbolo Alice" class="w-80">
+                    </a>
+                </article>
+                <article class="w-70">
+                    <p class="texto-dorado texto-mediano">ALICE</p>
+                    <p class="texto-gris texto-chico">BESTIARIO</p>
+                </article>
+            </article>
+
+            <nav class="w-60">
+                <ul class="d-flex centradito align-center w-100">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="index.html#dominios">DOMINIOS</a></li>
+                    <li><a href="armas.html">ARMAS</a></li>
+                    <li><a href="enemigos.html" class="texto-dorado">ENEMIGOS</a></li>
+                    <li><a href="personajes.html">PERSONAJES</a></li>
+                    <li><a href="trajes.html">TRAJES</a></li>
+                </ul>
+            </nav>
+
+            <article class="w-20 d-flex centradito">
+                <article class="borde-dorado w-90 text-center">
+                    <p class="bg-carmesi padding-chico">
+                        <a href="index.html" class="texto-blanco texto-chico">← VOLVER AL INICIO</a>
+                    </p>
+                </article>
+            </article>
+
+        </section>
+    </header>
+
+    <article class="bg-carmesi padding-linea w-100"></article>
+
+    <main class="w-100">
+
+        <section class="escenario-trajes w-100" id="carrusel-trajes" data-tema="clasico">
+
+            <article class="fondo-capa fondo-capa-a fondo-activo" id="fondo-a"></article>
+            <article class="fondo-capa fondo-capa-b" id="fondo-b"></article>
+            <article class="capa-atmosfera" id="capa-atmosfera"></article>
+
+            <article class="capa-rosas" aria-hidden="true">
+                <article class="rosa-histeria rosa-1"></article>
+                <article class="rosa-histeria rosa-2"></article>
+                <article class="rosa-histeria rosa-3"></article>
+                <article class="rosa-histeria rosa-4"></article>
+                <article class="rosa-histeria rosa-5"></article>
+                <article class="rosa-histeria rosa-6"></article>
+            </article>
+
+            <section class="contenido-escenario w-100">
+
+                <article class="text-center margen-abajo">
+                    <p class="texto-celeste texto-chico" id="etiqueta-dominio">CORRUPCIÓN MENTAL — TODOS LOS DOMINIOS</p>
+                    <h1 class="texto-blanco texto-gigante">ENEMIGOS DE LA RUINA</h1>
+                    <p class="texto-gris texto-normal">Haz clic en cualquier criatura o usa las Espadas Vorpal para explorar el bestiario (<span id="contador-trajes">1 / 9</span>).</p>
+                </article>
+
+                <section class="pista-carrusel w-100" id="pista-carrusel">
+                    <article class="tarjeta-traje" data-index="0">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-ruina">
+                                <p class="etiqueta-traje">LA RUINA</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article class="tarjeta-traje" data-index="1">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-tetera">
+                                <p class="etiqueta-traje">TETERA OJO</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article class="tarjeta-traje" data-index="2">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-madcap">
+                                <p class="etiqueta-traje">MOSCAS LOCAS</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article class="tarjeta-traje" data-index="3">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-cangrejo">
+                                <p class="etiqueta-traje">CANGREJO CAÑÓN</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article class="tarjeta-traje" data-index="4">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-avispa">
+                                <p class="etiqueta-traje">AVISPA SAMURÁI</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article class="tarjeta-traje" data-index="5">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-cartas">
+                                <p class="etiqueta-traje">GUARDIA CARTAS</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article class="tarjeta-traje" data-index="6">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-verdugo">
+                                <p class="etiqueta-traje">EL VERDUGO</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article class="tarjeta-traje" data-index="7">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-muneca">
+                                <p class="etiqueta-traje">NIÑA MUÑECA</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article class="tarjeta-traje" data-index="8">
+                        <article class="marco-traje">
+                            <article class="foto-traje img-enemigo-fabricante">
+                                <p class="etiqueta-traje">JEFE FINAL</p>
+                            </article>
+                        </article>
+                    </article>
+                </section>
+
+                <section class="d-flex centradito w-100 margen-arriba">
+                    <article class="caja-descripcion-borde w-50" id="caja-descripcion-borde">
+                        <article class="caja-descripcion-interior bg-negro padding-mediano text-center w-100" id="caja-descripcion">
+                            <p class="texto-dorado texto-chico" id="desc-capitulo">MANIFESTACIÓN DE LA CULPA</p>
+                            <h2 class="texto-blanco texto-grande" id="desc-titulo">LA RUINA INSIDIOSA</h2>
+                            <article class="linea-acento padding-linea w-30 margen-auto margen-abajo-chico"></article>
+                            <p class="texto-gris texto-normal margen-abajo-chico" id="desc-texto">Criaturas deformes de brea negra y cabezas de muñeca derretidas que brotan de la psique fracturada de Alice. Atacan en grupo y escupen fuego oscuro desde sus entrañas.</p>
+                            <p class="texto-celeste texto-chico" id="desc-origen">Debilidad: Combos rápidos de Espada Vorpal y Bomba Reloj para dispersar sus variantes gigantes.</p>
+                        </article>
+                    </article>
+                </section>
+
+                <article class="btn-vorpal btn-vorpal-izq" id="btn-anterior" role="button" tabindex="0" title="Anterior">
+                    <article class="vorpal-icono"></article>
+                    <p class="texto-dorado texto-chico text-center">← ANTERIOR</p>
+                </article>
+
+                <article class="btn-vorpal btn-vorpal-der" id="btn-siguiente" role="button" tabindex="0" title="Siguiente">
+                    <article class="vorpal-icono vorpal-derecha"></article>
+                    <p class="texto-dorado texto-chico text-center">SIGUIENTE →</p>
+                </article>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <article class="bg-carmesi padding-linea w-100"></article>
+
+    <footer class="bg-negro padding-grande w-100" id="final">
+        <section class="d-flex centradito align-center w-100 margen-abajo">
+            <article class="w-40 text-left">
+                <p class="texto-dorado texto-mediano">ENEMIGOS DE LA RUINA</p>
+                <p class="texto-gris texto-chico">Bestiario interactivo — Alice: Madness Returns</p>
+            </article>
+
+            <article class="w-30 text-center">
+                <article class="borde-dorado w-100">
+                    <p class="bg-carmesi padding-chico">
+                        <a href="index.html" class="texto-blanco texto-chico">← VOLVER A LA PÁGINA PRINCIPAL</a>
+                    </p>
+                </article>
+            </article>
+
+            <article class="w-30 text-right">
+                <p class="texto-rojo texto-chico">ARCHIVO LONDRES — 1875</p>
+                <p class="texto-gris texto-chico">Registro de Amenazas (9 Enemigos)</p>
+            </article>
+        </section>
+
+        <article class="bg-oscuro padding-linea w-100 margen-abajo-chico"></article>
+        <p class="texto-gris texto-chico text-center">© 2026 Tributo Alice: Madness Returns — Todos los derechos de la obra pertenecen a sus respectivos autores.</p>
+    </footer>
+
+    <script src="./js/scroll.js"></script>
+    <script src="./js/enemigos.js"></script>
+</body>
+</html>

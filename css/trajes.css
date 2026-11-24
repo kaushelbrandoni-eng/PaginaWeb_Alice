@@ -1,0 +1,529 @@
+.escenario-trajes {
+    position: relative;
+    min-height: 92vh;
+    overflow: hidden;
+    padding: 45px 4% 95px 4%;
+    border-top: 3px solid rgb(110, 115, 125);
+    border-bottom: 3px solid rgb(110, 115, 125);
+    transition: border-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+
+.fondo-capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1.06);
+    transition: opacity 0.75s ease, transform 0.9s ease, filter 0.75s ease;
+    z-index: 1;
+}
+
+.fondo-capa.fondo-activo {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.capa-atmosfera {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(12, 11, 16, 0.35) 0%, rgba(8, 7, 11, 0.88) 100%);
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.88);
+    z-index: 2;
+    pointer-events: none;
+    transition: background 0.7s ease, box-shadow 0.7s ease;
+}
+
+
+.contenido-escenario {
+    position: relative;
+    z-index: 5;
+}
+
+
+
+.pista-carrusel {
+    position: relative;
+    height: 440px;
+    margin: 15px 0 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-traje {
+    position: absolute;
+    width: 240px;
+    height: 390px;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.55s ease,
+                filter 0.55s ease;
+    will-change: transform, opacity;
+}
+
+.marco-traje {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    background-color: rgb(110, 110, 120);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.85);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.foto-traje {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 19, 26);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.etiqueta-traje {
+    width: 100%;
+    background-color: rgba(10, 9, 12, 0.84);
+    color: rgb(235, 230, 225);
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 6px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+.tarjeta-traje.pos-centro {
+    transform: translateX(0) scale(1.06);
+    z-index: 10;
+    opacity: 1;
+    filter: brightness(1.05);
+}
+
+.tarjeta-traje.pos-izq-1 {
+    transform: translateX(-275px) scale(0.82);
+    z-index: 8;
+    opacity: 0.86;
+    filter: brightness(0.75);
+}
+
+.tarjeta-traje.pos-der-1 {
+    transform: translateX(275px) scale(0.82);
+    z-index: 8;
+    opacity: 0.86;
+    filter: brightness(0.75);
+}
+
+.tarjeta-traje.pos-izq-2 {
+    transform: translateX(-485px) scale(0.64);
+    z-index: 6;
+    opacity: 0.58;
+    filter: brightness(0.55);
+}
+
+.tarjeta-traje.pos-der-2 {
+    transform: translateX(485px) scale(0.64);
+    z-index: 6;
+    opacity: 0.58;
+    filter: brightness(0.55);
+}
+
+.tarjeta-traje.pos-oculta-izq {
+    transform: translateX(-620px) scale(0.45);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tarjeta-traje.pos-oculta-der {
+    transform: translateX(620px) scale(0.45);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tarjeta-traje:not(.pos-centro):hover {
+    filter: brightness(0.98);
+}
+
+
+.img-traje-londres     { background-image: url(../img/traje-londres.jpg); }
+.img-traje-clasico     { background-image: url(../img/traje-clasico.jpg); }
+.img-traje-sombrerero  { background-image: url(../img/traje-sombrerero.jpg); }
+.img-traje-sirena      { background-image: url(../img/traje-sirena.jpg); }
+.img-traje-seda        { background-image: url(../img/traje-seda.jpg); }
+.img-traje-reina       { background-image: url(../img/traje-reina.jpg); }
+.img-traje-muneca      { background-image: url(../img/traje-muneca.jpg); }
+.img-traje-cheshire    { background-image: url(../img/traje-cheshire.png); }
+.img-traje-jaquemate   { background-image: url(../img/traje-jaquemate.jpg); }
+.img-traje-conejo      { background-image: url(../img/traje-conejo.jpg); }
+.img-traje-sombrerera  { background-image: url(../img/traje-sombrerera.jpg); }
+.img-traje-oruga       { background-image: url(../img/traje-oruga.jpg); }
+.img-traje-carne       { background-image: url(../img/traje-carne.jpg); }
+.img-traje-histeria    { background-image: url(../img/traje-histeria.jpg); }
+
+
+
+.caja-descripcion-borde {
+    padding: 2px;
+    background-color: rgb(140, 145, 155);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+.caja-descripcion-interior {
+    transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.caja-descripcion-interior.cambiando {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+.margen-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.linea-acento {
+    background-color: rgb(155, 22, 34);
+    transition: background-color 0.5s ease;
+}
+
+
+
+.btn-vorpal {
+    position: absolute;
+    bottom: -55px;
+    width: 190px;
+    padding: 8px 10px;
+    background-color: rgba(12, 10, 15, 0.82);
+    border: 2px solid rgb(185, 150, 95);
+    cursor: pointer;
+    z-index: 15;
+    user-select: none;
+    transition: transform 0.25s ease, border-color 0.4s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-vorpal-izq {
+    left: 15px;
+}
+
+.btn-vorpal-der {
+    right: 15px;
+}
+
+.btn-vorpal:hover {
+    background-color: rgba(45, 10, 16, 0.92);
+    box-shadow: 0 0 22px rgba(215, 35, 50, 0.55);
+}
+
+.btn-vorpal-izq:hover {
+    transform: translateX(-6px) scale(1.04);
+}
+
+.btn-vorpal-der:hover {
+    transform: translateX(6px) scale(1.04);
+}
+
+.btn-vorpal:active {
+    transform: scale(0.95);
+}
+
+.vorpal-icono {
+    width: 100%;
+    height: 48px;
+    background-image: url("../img/Espada-izq.png");
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vorpal-derecha {
+    transform: scaleX(-1);
+}
+
+
+
+
+.escenario-trajes[data-tema="londres"] { border-color: rgb(125, 135, 145); }
+.escenario-trajes[data-tema="londres"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(18, 22, 28, 0.25) 0%, rgba(10, 12, 16, 0.88) 100%);
+    box-shadow: inset 0 0 90px rgba(110, 125, 140, 0.28);
+}
+.escenario-trajes[data-tema="londres"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="londres"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="londres"] .linea-acento {
+    background-color: rgb(150, 160, 170);
+}
+
+
+.escenario-trajes[data-tema="clasico"] { border-color: rgb(95, 185, 205); }
+.escenario-trajes[data-tema="clasico"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(12, 24, 30, 0.22) 0%, rgba(8, 12, 18, 0.88) 100%);
+    box-shadow: inset 0 0 95px rgba(85, 175, 205, 0.34);
+}
+.escenario-trajes[data-tema="clasico"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="clasico"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="clasico"] .linea-acento {
+    background-color: rgb(105, 195, 215);
+}
+
+
+.escenario-trajes[data-tema="sombrerero"] { border-color: rgb(205, 135, 60); }
+.escenario-trajes[data-tema="sombrerero"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(28, 18, 8, 0.22) 0%, rgba(12, 8, 4, 0.88) 100%);
+    box-shadow: inset 0 0 105px rgba(205, 125, 40, 0.4);
+}
+.escenario-trajes[data-tema="sombrerero"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="sombrerero"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="sombrerero"] .linea-acento {
+    background-color: rgb(215, 145, 65);
+}
+
+
+.escenario-trajes[data-tema="profundidades"] { border-color: rgb(65, 210, 225); }
+.escenario-trajes[data-tema="profundidades"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(8, 28, 38, 0.22) 0%, rgba(4, 10, 16, 0.9) 100%);
+    box-shadow: inset 0 0 110px rgba(40, 200, 220, 0.36);
+}
+.escenario-trajes[data-tema="profundidades"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="profundidades"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="profundidades"] .linea-acento {
+    background-color: rgb(70, 215, 230);
+}
+
+
+.escenario-trajes[data-tema="bosque"] { border-color: rgb(215, 165, 85); }
+.escenario-trajes[data-tema="bosque"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(30, 18, 10, 0.24) 0%, rgba(12, 8, 6, 0.88) 100%);
+    box-shadow: inset 0 0 105px rgba(215, 155, 60, 0.35);
+}
+.escenario-trajes[data-tema="bosque"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="bosque"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="bosque"] .linea-acento {
+    background-color: rgb(220, 175, 95);
+}
+
+
+.escenario-trajes[data-tema="queensland"] { border-color: rgb(175, 25, 38); }
+.escenario-trajes[data-tema="queensland"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(36, 8, 12, 0.24) 0%, rgba(10, 4, 6, 0.9) 100%);
+    box-shadow: inset 0 0 105px rgba(165, 18, 30, 0.42);
+}
+.escenario-trajes[data-tema="queensland"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="queensland"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="queensland"] .linea-acento {
+    background-color: rgb(195, 32, 46);
+}
+
+
+.escenario-trajes[data-tema="munecas"] { border-color: rgb(185, 165, 130); }
+.escenario-trajes[data-tema="munecas"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(32, 26, 20, 0.26) 0%, rgba(12, 9, 8, 0.9) 100%);
+    box-shadow: inset 0 0 100px rgba(175, 135, 85, 0.32);
+}
+.escenario-trajes[data-tema="munecas"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="munecas"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="munecas"] .linea-acento {
+    background-color: rgb(200, 180, 145);
+}
+
+
+.escenario-trajes[data-tema="cheshire"] { border-color: rgb(155, 85, 210); }
+.escenario-trajes[data-tema="cheshire"] .fondo-capa {
+    filter: hue-rotate(240deg) saturate(1.15) brightness(0.75);
+}
+.escenario-trajes[data-tema="cheshire"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(25, 12, 38, 0.22) 0%, rgba(10, 4, 16, 0.9) 100%);
+    box-shadow: inset 0 0 110px rgba(155, 75, 215, 0.42);
+}
+.escenario-trajes[data-tema="cheshire"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="cheshire"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="cheshire"] .linea-acento {
+    background-color: rgb(175, 105, 230);
+}
+
+
+.escenario-trajes[data-tema="jaquemate"] { border-color: rgb(230, 226, 220); }
+.escenario-trajes[data-tema="jaquemate"] .fondo-capa {
+    filter: grayscale(90%) contrast(125%) brightness(0.72);
+}
+.escenario-trajes[data-tema="jaquemate"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.04) 0%, rgba(8, 8, 10, 0.92) 100%);
+    box-shadow: inset 0 0 95px rgba(235, 230, 220, 0.3);
+}
+.escenario-trajes[data-tema="jaquemate"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="jaquemate"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="jaquemate"] .linea-acento {
+    background-color: rgb(235, 230, 222);
+}
+
+
+.escenario-trajes[data-tema="conejo"] { border-color: rgb(215, 170, 75); }
+.escenario-trajes[data-tema="conejo"] .fondo-capa {
+    filter: sepia(30%) contrast(110%) brightness(0.78);
+}
+.escenario-trajes[data-tema="conejo"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(35, 18, 10, 0.22) 0%, rgba(16, 6, 8, 0.9) 100%);
+    box-shadow: inset 0 0 105px rgba(205, 145, 50, 0.4);
+}
+.escenario-trajes[data-tema="conejo"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="conejo"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="conejo"] .linea-acento {
+    background-color: rgb(225, 180, 85);
+}
+
+
+.escenario-trajes[data-tema="sombrerera"] { border-color: rgb(75, 175, 130); }
+.escenario-trajes[data-tema="sombrerera"] .fondo-capa {
+    filter: hue-rotate(55deg) saturate(1.05) brightness(0.78);
+}
+.escenario-trajes[data-tema="sombrerera"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(10, 28, 20, 0.22) 0%, rgba(6, 12, 10, 0.9) 100%);
+    box-shadow: inset 0 0 105px rgba(55, 165, 115, 0.36);
+}
+.escenario-trajes[data-tema="sombrerera"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="sombrerera"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="sombrerera"] .linea-acento {
+    background-color: rgb(85, 190, 140);
+}
+
+
+.escenario-trajes[data-tema="oruga"] { border-color: rgb(80, 195, 175); }
+.escenario-trajes[data-tema="oruga"] .fondo-capa {
+    filter: hue-rotate(155deg) saturate(1.1) brightness(0.75);
+}
+.escenario-trajes[data-tema="oruga"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(10, 28, 32, 0.22) 0%, rgba(6, 10, 16, 0.9) 100%);
+    box-shadow: inset 0 0 105px rgba(65, 185, 170, 0.38);
+}
+.escenario-trajes[data-tema="oruga"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="oruga"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="oruga"] .linea-acento {
+    background-color: rgb(95, 210, 190);
+}
+
+
+.escenario-trajes[data-tema="carne"] { border-color: rgb(165, 32, 48); }
+.escenario-trajes[data-tema="carne"] .fondo-capa {
+    filter: saturate(1.2) contrast(115%) brightness(0.72);
+}
+.escenario-trajes[data-tema="carne"] .capa-atmosfera {
+    background: radial-gradient(ellipse at center, rgba(35, 6, 10, 0.22) 0%, rgba(16, 2, 6, 0.92) 100%);
+    box-shadow: inset 0 0 100px rgba(155, 20, 35, 0.45);
+}
+.escenario-trajes[data-tema="carne"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="carne"] .caja-descripcion-borde,
+.escenario-trajes[data-tema="carne"] .linea-acento {
+    background-color: rgb(185, 38, 55);
+}
+
+
+.escenario-trajes[data-tema="histeria"] {
+    border-color: rgb(145, 16, 28);
+    box-shadow: inset 0 0 0 2px rgba(165, 18, 32, 0.55);
+}
+.escenario-trajes[data-tema="histeria"] .fondo-capa {
+    filter: grayscale(100%) contrast(120%) brightness(0.72);
+}
+.escenario-trajes[data-tema="histeria"] .capa-atmosfera {
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.05) 0%,
+        rgba(8, 4, 6, 0.22) 48%,
+        rgba(95, 8, 18, 0.58) 80%,
+        rgba(18, 2, 5, 0.94) 100%
+    );
+    box-shadow: inset 0 0 75px rgba(145, 10, 22, 0.55);
+    animation: pulsoHisteria 3s ease-in-out infinite;
+}
+.escenario-trajes[data-tema="histeria"] .pos-centro .marco-traje,
+.escenario-trajes[data-tema="histeria"] .caja-descripcion-borde {
+    background-color: rgb(175, 22, 36);
+    box-shadow: 0 0 26px rgba(175, 18, 32, 0.55);
+}
+.escenario-trajes[data-tema="histeria"] .btn-vorpal {
+    border-color: rgb(175, 22, 36);
+    box-shadow: 0 0 14px rgba(165, 18, 32, 0.4);
+}
+.escenario-trajes[data-tema="histeria"] .linea-acento {
+    background-color: rgb(185, 24, 38);
+}
+
+@keyframes pulsoHisteria {
+    0%, 100% { box-shadow: inset 0 0 65px rgba(125, 8, 18, 0.42); }
+    50%      { box-shadow: inset 0 0 105px rgba(175, 14, 28, 0.68); }
+}
+
+
+
+.capa-rosas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.rosa-histeria {
+    position: absolute;
+    background-image: url("../img/rosa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transform: scale(0.2) rotate(-25deg);
+    filter: drop-shadow(0 0 14px rgba(185, 15, 30, 0.65));
+    transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rosa-1 { top: 18px;    left: 22px;   width: 110px; height: 110px; transition-delay: 0.05s; }
+.rosa-2 { top: 24px;    right: 28px;  width: 118px; height: 118px; transition-delay: 0.15s; }
+.rosa-3 { top: 44%;     left: 12px;   width: 82px;  height: 82px;  transition-delay: 0.25s; }
+.rosa-4 { top: 42%;     right: 16px;  width: 88px;  height: 88px;  transition-delay: 0.20s; }
+.rosa-5 { bottom: 95px; left: 52px;   width: 98px;  height: 98px;  transition-delay: 0.30s; }
+.rosa-6 { bottom: 95px; right: 56px;  width: 104px; height: 104px; transition-delay: 0.35s; }
+
+.escenario-trajes[data-tema="histeria"] .rosa-histeria {
+    opacity: 0.9;
+    transform: scale(1) rotate(0deg);
+    animation: flotarRosa 4.5s ease-in-out infinite;
+}
+
+.escenario-trajes[data-tema="histeria"] .rosa-2,
+.escenario-trajes[data-tema="histeria"] .rosa-4,
+.escenario-trajes[data-tema="histeria"] .rosa-6 {
+    animation-delay: 1.2s;
+}
+
+@keyframes flotarRosa {
+    0%, 100% { transform: translateY(0px) rotate(-4deg) scale(1); }
+    50%      { transform: translateY(-10px) rotate(6deg) scale(1.06); }
+}
+
+/* =========================================================
+   ADAPTACIÓN PARA PANTALLAS MEDIANAS
+   ========================================================= */
+@media (max-width: 1150px) {
+    .tarjeta-traje { width: 200px; height: 330px; }
+    .tarjeta-traje.pos-izq-1 { transform: translateX(-215px) scale(0.8); }
+    .tarjeta-traje.pos-der-1 { transform: translateX(215px) scale(0.8); }
+    .tarjeta-traje.pos-izq-2 { transform: translateX(-375px) scale(0.6); }
+    .tarjeta-traje.pos-der-2 { transform: translateX(375px) scale(0.6); }
+}
