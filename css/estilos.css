@@ -1,4 +1,4 @@
-* { box-sizing: border-box; padding: 0; margin: 0; scroll-behavior: smooth; }
+* { box-sizing: border-box; padding: 0; margin: 0; }
 
 html, body {
     overflow-x: hidden;
@@ -237,35 +237,16 @@ a:hover {
 
  @media (max-width: 960px) {
     .d-flex {
-        flex-wrap: wrap !important;
-        gap: 16px;
-    }
-
-    header section.d-flex,
-    main section.d-flex,
-    footer section.d-flex {
         flex-direction: column !important;
+        flex-wrap: wrap !important;
         align-items: center !important;
-    }
-
-    header .w-20,
-    header .w-60,
-    nav.w-60,
-    .w-20,
-    .w-30,
-    .w-40,
-    .w-45,
-    .w-50,
-    .w-60,
-    .w-70,
-    .w-80,
-    .w-90 {
-        width: 100% !important;
+        gap: 16px;
     }
 
     header .w-20 {
         flex-direction: row !important;
         justify-content: center !important;
+        width: 100% !important;
     }
 
     header .w-20 .w-30 {
@@ -276,11 +257,24 @@ a:hover {
         width: auto !important;
     }
 
-    nav ul {
+    nav ul.d-flex {
         flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
         gap: 6px;
+    }
+
+    .w-20,
+    .w-30,
+    .w-40,
+    .w-45,
+    .w-50,
+    .w-60,
+    .w-70,
+    .w-80,
+    .w-90,
+    .w-97 {
+        width: 100% !important;
     }
 
     footer .text-left,
