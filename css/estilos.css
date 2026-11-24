@@ -1,5 +1,9 @@
 * { box-sizing: border-box; padding: 0; margin: 0; scroll-behavior: smooth; }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
 
 h1 { font-size: 42px; padding: 10px; }
 h2 { font-size: 28px; padding: 10px; }
@@ -231,81 +235,92 @@ a:hover {
     width: 100%;
 }
 
-@media (max-width: 960px) {
+ @media (max-width: 960px) {
     .d-flex {
-        flex-wrap: wrap;
+        flex-wrap: wrap !important;
         gap: 16px;
+    }
+
+    header section.d-flex,
+    main section.d-flex,
+    footer section.d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
     header .w-20,
     header .w-60,
     nav.w-60,
+    .w-20,
     .w-30,
     .w-40,
     .w-45,
     .w-50,
     .w-60,
     .w-70,
-    .w-80 {
-        width: 100%;
+    .w-80,
+    .w-90 {
+        width: 100% !important;
     }
 
     header .w-20 {
-        justify-content: center;
+        flex-direction: row !important;
+        justify-content: center !important;
     }
 
     header .w-20 .w-30 {
-        width: 55px;
+        width: 55px !important;
     }
 
     header .w-20 .w-70 {
-        width: auto;
+        width: auto !important;
     }
 
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 6px;
     }
 
     footer .text-left,
     footer .text-right {
-        text-align: center;
+        text-align: center !important;
     }
 
     .padding-hero {
-        padding: 55px 5%;
+        padding: 45px 5% !important;
     }
 
     .padding-grande {
-        padding: 40px 5%;
+        padding: 35px 5% !important;
     }
 
     .alto-destacado {
-        padding: 100px 15px;
+        padding: 100px 15px !important;
     }
 }
 
 @media (max-width: 640px) {
     .texto-gigante {
-        font-size: 28px;
+        font-size: 28px !important;
     }
 
     .texto-grande {
-        font-size: 22px;
+        font-size: 22px !important;
     }
 
     .texto-mediano {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     .alto-tarjeta {
-        padding: 75px 10px;
+        padding: 80px 10px !important;
     }
 
     .alto-arma {
-        width: 100%;
-        padding: 95px 10px;
+        width: 100% !important;
+        padding: 95px 10px !important;
     }
 
     .botones-flotantes {
