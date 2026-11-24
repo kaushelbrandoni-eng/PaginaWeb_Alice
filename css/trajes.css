@@ -517,13 +517,81 @@
     50%      { transform: translateY(-10px) rotate(6deg) scale(1.06); }
 }
 
-/* =========================================================
-   ADAPTACIÓN PARA PANTALLAS MEDIANAS
-   ========================================================= */
+
 @media (max-width: 1150px) {
     .tarjeta-traje { width: 200px; height: 330px; }
     .tarjeta-traje.pos-izq-1 { transform: translateX(-215px) scale(0.8); }
     .tarjeta-traje.pos-der-1 { transform: translateX(215px) scale(0.8); }
     .tarjeta-traje.pos-izq-2 { transform: translateX(-375px) scale(0.6); }
     .tarjeta-traje.pos-der-2 { transform: translateX(375px) scale(0.6); }
+}
+
+@media (max-width: 900px) {
+    .escenario-trajes {
+        padding: 35px 4% 45px 4%;
+    }
+
+    .pista-carrusel {
+        height: 360px;
+    }
+
+    .tarjeta-traje {
+        width: 190px;
+        height: 310px;
+    }
+
+    .tarjeta-traje.pos-izq-1 {
+        transform: translateX(-165px) scale(0.8);
+    }
+
+    .tarjeta-traje.pos-der-1 {
+        transform: translateX(165px) scale(0.8);
+    }
+
+    .tarjeta-traje.pos-izq-2,
+    .tarjeta-traje.pos-der-2 {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .caja-descripcion-borde {
+        width: 92%;
+    }
+
+    .btn-vorpal {
+        position: static;
+        display: inline-block;
+        width: 45%;
+        margin: 18px 2% 0 2%;
+    }
+
+    .contenido-escenario {
+        text-align: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .pista-carrusel {
+        height: 320px;
+    }
+
+    .tarjeta-traje {
+        width: 170px;
+        height: 275px;
+    }
+
+    .tarjeta-traje.pos-izq-1 {
+        transform: translateX(-110px) scale(0.76);
+        opacity: 0.65;
+    }
+
+    .tarjeta-traje.pos-der-1 {
+        transform: translateX(110px) scale(0.76);
+        opacity: 0.65;
+    }
+
+    .rosa-histeria {
+        width: 65px;
+        height: 65px;
+    }
 }
